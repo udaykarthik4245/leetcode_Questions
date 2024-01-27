@@ -21,4 +21,10 @@ class Solution:
 
         # # Return the new length of the list
         # return len(nums)
-
+                                          # same as 2nd approach
+        # while i<len(nums):
+        #     if nums[i]==val:
+        #         nums.pop(i)
+        #     else:
+        #         i+=1
+        # return len(nums)
