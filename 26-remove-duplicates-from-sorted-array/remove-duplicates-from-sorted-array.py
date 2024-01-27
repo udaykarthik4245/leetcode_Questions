@@ -9,19 +9,14 @@ class Solution:
                 nums[i - duplicates] = nums[i]
 
         return len(nums) - duplicates
-    #     arr.sort()
-    #     n=len(arr)
-    
-    # # Initialize an empty list to store unique elements
-    #     unique_arr = []
+        # 2nd approch using while loop
+        # i=0
+        # while i<len(nums):
+        #     if len(nums)==1:
+        #         return len(nums)
+        #     if nums[i]==nums[i-1]:
+        #         nums.pop(i)
+        #     else:
+        #         i+=1
+        # return len(nums)
 
-    #     # Iterate through the sorted list and add unique elements to the new list
-    #     for i in range(n):
-    #         if i == 0 or arr[i] != arr[i - 1]:
-    #             unique_arr.append(arr[i])
-
-    #     # Copy the unique elements back to the original list
-    #     for i in range(len(unique_arr)):
-    #         arr[i] = unique_arr[i]
-
-    #     return len(unique_arr)
