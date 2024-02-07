@@ -1,7 +1,7 @@
 class Solution:
     def firstUniqChar(self, s: str) -> int:
-        sl=list(s)
-        du=[]
+        # sl=list(s)
+        # du=[]
 
 
         # for i in sl:
