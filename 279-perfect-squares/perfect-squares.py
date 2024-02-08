@@ -15,4 +15,4 @@ class Solution:
             dp[i] = min_squares + 1
         
         return dp[n]
-        
+
