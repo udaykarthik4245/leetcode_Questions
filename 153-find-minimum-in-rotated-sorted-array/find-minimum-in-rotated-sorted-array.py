@@ -2,7 +2,7 @@ class Solution:
     def findMin(self, arr: List[int]) -> int:
         # return min(nums)
         low=0
-        ans=10000
+        ans=arr[0]
         n=len(arr)
         high=n-1
         while(low<=high):
