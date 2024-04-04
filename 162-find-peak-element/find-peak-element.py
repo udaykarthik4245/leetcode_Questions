@@ -18,6 +18,18 @@ class Solution:
             else:
                 high=mid-1
         return -1
+    #another solution 
+        left = 0
+        right = len(arr) - 1
+
+        while left < right:
+            mid = (left + right) // 2
+            if arr[mid] < arr[mid + 1]:
+                left = mid + 1 # Narrow it since it wont be a smaller number
+            else: #arr[mid] > arr[mid + 1]
+                right = mid # Could be Right
+        
+        return left
 
     #o(n) solution
         return nums.index(max(nums))
