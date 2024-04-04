@@ -19,15 +19,23 @@ class Solution:
             else:
                 high=mid-1
         return -1
-
+#easily readeable solution 
+        # we can tell by parity
+        # even and following odd index should be the same
+        l, r = 0, len(nums) - 1
+        while l < r:
+            mid = (l + r) // 2
+            # odd
+            if mid % 2:
+                mid -= 1
+            if nums[mid] == nums[mid + 1]:
+                l = mid + 2
+            else:
+                r = mid
+        return nums[l]
         
-        
 
-
-
-
-
-        #o(n) complexity using dictionary counters
+#o(n) complexity using dictionary counters
         c=Counter(nums)
         for n,count in c.items():
             if count==1:
