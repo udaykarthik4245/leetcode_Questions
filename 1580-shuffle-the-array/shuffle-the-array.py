@@ -5,10 +5,15 @@ class Solution:
         nums2=nums[n//2:]
         print(nums1)
         print(nums2)
-        # n1=nums1[0]
-        # n2=nums2[0]
         res=[]
         for i in range(len(nums1)):
             res.append(nums1[i])
             res.append(nums2[i])
+        return res
+
+        # easy solution
+        res = []
+        for i in range(n):
+            res.append(nums[i])
+            res.append(nums[i+n])
         return res
