@@ -1,5 +1,10 @@
 class Solution:
     def removeTrailingZeros(self, num: str) -> str:
+
+        # other small solution
+        while(num[-1]=='0'):
+            num=num.rstrip('0')
+        return num
         l=list(num)
         # l.reverse()
         # print(l)
