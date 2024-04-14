@@ -1,5 +1,21 @@
+
+# OPTIMAL SOLUTION  BINARY SEARCH 
 class Solution:
     def isPalindrome(self, s: str) -> bool:
+        left, right = 0, len(s) - 1
+        while left < right:
+            if not s[left].isalnum():
+                left += 1
+            elif not s[right].isalnum():
+                right -= 1
+            else:
+                if s[left] == s[right] or s[left].lower() == s[right].lower():
+                    left += 1
+                    right -= 1
+                else:
+                    return False
+        return True
+        
                 # Convert the string to lowercase and remove non-alphanumeric characters
         cleaned_s = ''.join(char.lower() for char in s if char.isalnum())
         # Check if the cleaned string is a palindrome
