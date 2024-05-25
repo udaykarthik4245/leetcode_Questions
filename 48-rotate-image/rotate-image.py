@@ -1,8 +1,11 @@
 class Solution:
+    # @cache
+    
     def rotate(self, arr: List[List[int]]) -> None:
-        """
-        Do not return anything, modify matrix in-place instead.
-        """
+        # @cache
+        # """
+        # Do not return anything, modify matrix in-place instead.
+        # """
         n=len(arr)
         for i in range(n):
             for j in range(n):
