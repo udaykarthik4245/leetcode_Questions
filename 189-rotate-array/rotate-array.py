@@ -7,3 +7,7 @@ class Solution:
         first=nums[-k:]
         nums[:]=nums[:-k]
         nums[:0]=first
+        #2nd solution
+        #    for _ in range(k):
+        #     el = nums.pop(-1)
+        #     nums.insert(0, el)
