@@ -6,7 +6,7 @@ class Solution:
         z=' '.join(map(str,l))
         # sr=str(z)
         return(z)
-        s=s.split()  
+        # s=s.split()  
         # for i in range(n//2):
         #     s[i],s[n-i-1]=s[n-i-1],s[i]
         #     # i+=1
