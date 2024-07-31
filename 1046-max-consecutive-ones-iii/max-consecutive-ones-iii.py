@@ -12,7 +12,8 @@ class Solution:
                 if arr[l]==0:
                     zeroes-=1
                 l+=1
+            if zeroes<=k:
+                maxlen=max(maxlen,r-l+1)
             r+=1
-            maxlen=max(maxlen,r-l)
         return  (maxlen)
         
