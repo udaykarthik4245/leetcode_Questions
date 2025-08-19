@@ -1,16 +1,33 @@
 class Solution:
     def isValid(self, s: str) -> bool:
-        stack=[]
-        d={'}':'{',')':'(',']':'['}
+        st=[]
+        d={'(': ')', '[': ']', '{': '}'}
         for i in s:
-            if i not in d:
-                stack.append(i)
+            if i in d.keys():
+                st.append(i)
             else:
-                if not stack:
+                if not st:
                     return False
                 else:
-                    popped_ele=stack.pop()
-                    if popped_ele not in d[i]:
+                    poped=st.pop()
+                    if d[poped]!=i:
+
                         return False
-        return not stack
+        return not st
+
+# #2nd solution
+#         open_close = dict(('()', '[]', '{}'))
+
+#         st = []
+        
+#         for idx in s:
+
+#                 if idx in '([{':
+#                     st.append(idx)
+
+#                 elif len(st) == 0 or idx != open_close[st.pop()]:
+#                     return False
+
+#         return len(st) == 0
+
         
