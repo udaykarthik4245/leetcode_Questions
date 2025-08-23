@@ -1,8 +1,21 @@
 from collections import Counter
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
-        n=len(nums)
-        major=n//2
+    #main optimal solution 
+        candidate = None
+        count = 0
+ 
+        for num in nums:
+            if count == 0:
+                candidate = num
+            
+            count += 1 if candidate == num else -1
+        return candidate
+    
+    #solution using sort and comparing 
+
+            # n=len(nums)
+        # major=n//2
 
         # nums.sort()
         # count=1
@@ -17,10 +30,12 @@ class Solution:
         #     return nums[0]
 
         # return -1
-        c=Counter(nums)
-        for i in c:
-            if c[i]>major:
-                return i
-        return -1
+
+        # 2nd solution using hashmap
+        # c=Counter(nums)
+        # for i in c:
+        #     if c[i]>major:
+        #         return i
+        # return -1
 
         
