@@ -11,7 +11,8 @@ class Solution:
         # n=len(piles)
         # maxi=max(piles)
         l=1
-        r=max(piles)
+        # r=max(piles)
+        r=max(piles) // (h//len(piles)) + 1
         # k_find=[x for x in range(1,max(piles)+1)]
         while l<=r:
             mid=(l+r)//2
