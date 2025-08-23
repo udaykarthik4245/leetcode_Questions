@@ -11,9 +11,8 @@ class Solution:
                     return nums[i]
             else:
                 count=1
-        for i in nums:
-            if n==1:
-                return i
+        if n==1:
+            return nums[0]
 
         return -1
 
