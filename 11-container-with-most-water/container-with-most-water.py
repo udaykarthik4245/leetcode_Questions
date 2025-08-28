@@ -11,7 +11,7 @@ class Solution:
             area=w*h
             max_area=max(max_area,area)
 
-            if height[l]>height[r]:
+            if height[l]>h:
                 r-=1
             else:
                 l+=1
